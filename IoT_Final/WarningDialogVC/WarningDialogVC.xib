@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WarningDialogVC" customModule="IoT_Final" customModuleProvider="target">
             <connections>
+                <outlet property="constraint_gif_width" destination="GJ7-Uz-1AD" id="ojb-A1-ZwZ"/>
                 <outlet property="label_title" destination="DJT-wG-mbI" id="xHp-QM-r2I"/>
                 <outlet property="view" destination="gK8-b9-BZN" id="m5e-fH-V1F"/>
                 <outlet property="view_background" destination="hWs-99-AFV" id="0ac-cZ-KiX"/>
+                <outlet property="view_gif" destination="lCX-4X-uRg" id="A6A-RU-z78"/>
                 <outlet property="view_warning" destination="Q73-SK-foO" id="9kK-Kh-8ZB"/>
             </connections>
         </placeholder>
@@ -21,37 +23,35 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-99-AFV" userLabel="View Background">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q73-SK-foO">
-                    <rect key="frame" x="29.333333333333343" y="247" width="334.33333333333326" height="358"/>
+                    <rect key="frame" x="29.333333333333343" y="284" width="334.33333333333326" height="284"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-r3-hOn">
-                            <rect key="frame" x="30" y="25" width="274.33333333333331" height="308"/>
+                            <rect key="frame" x="67.333333333333343" y="25" width="200.00000000000003" height="234"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標題" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-wG-mbI" userLabel="Label Title">
-                                    <rect key="frame" x="0.0" y="0.0" width="274.33333333333331" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCX-4X-uRg" userLabel="View Warning GIF">
-                                    <rect key="frame" x="0.0" y="34" width="274.33333333333331" height="274"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="lCX-4X-uRg" secondAttribute="height" id="0Jx-fq-ubE"/>
+                                        <constraint firstAttribute="width" constant="200" id="GJ7-Uz-1AD"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標題" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-wG-mbI" userLabel="Label Title">
+                                    <rect key="frame" x="0.0" y="210" width="200" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="uP1-r3-hOn" firstAttribute="top" secondItem="Q73-SK-foO" secondAttribute="top" constant="25" id="9YF-x1-8qr"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="Wmn-ER-GOP"/>
-                        <constraint firstItem="uP1-r3-hOn" firstAttribute="leading" secondItem="Q73-SK-foO" secondAttribute="leading" constant="30" id="a2A-90-cEU"/>
+                        <constraint firstItem="uP1-r3-hOn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q73-SK-foO" secondAttribute="leading" id="a2A-90-cEU"/>
                         <constraint firstItem="uP1-r3-hOn" firstAttribute="centerY" secondItem="Q73-SK-foO" secondAttribute="centerY" id="boD-Hb-v00"/>
                         <constraint firstItem="uP1-r3-hOn" firstAttribute="centerX" secondItem="Q73-SK-foO" secondAttribute="centerX" id="o3X-7V-Vif"/>
                     </constraints>
@@ -60,6 +60,10 @@
                             <real key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-99-AFV" userLabel="View Background">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="cjH-wT-gXM"/>

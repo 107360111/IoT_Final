@@ -20,14 +20,20 @@ class GPSModel: Codable {
 }
 
 class CallModel: Codable {
-    var name: String
     var overDistance: Bool
     var findDevice: Bool
     
-    init(name: String, overDistance: Bool, findDevice: Bool) {
-        self.name = name
+    init(overDistance: Bool, findDevice: Bool) {
         self.overDistance = overDistance
         self.findDevice = findDevice
+    }
+}
+
+class ConnectModel: Codable {
+    var isConnct: Bool
+    
+    init(isConnct: Bool) {
+        self.isConnct = isConnct
     }
 }
 

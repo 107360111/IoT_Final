@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 import CoreBluetooth
 import CoreLocation
 
@@ -43,6 +44,9 @@ class CentralVC: UIViewController {
     private var peripheralManager: CBPeripheralManager!
     private var characteristic: CBCharacteristic!
     
+    private var audioPlayer: AVAudioPlayer?
+    private var feedbackGenerator = UINotificationFeedbackGenerator()
+    
     private var peripheralsList = [CBPeripheral]() { didSet { self.tableView.reloadData() }}
     private var peripheralsName = [String]()
     private var peripheralsRSSI = [Int]()
@@ -51,13 +55,16 @@ class CentralVC: UIViewController {
     private var timer: Timer?
     
     // 上限範圍，單位cm，討論過後決定變成比例尺的概念(固定)
-    private var tempLimitMeter: Int = 2000
+    private var tempLimitMeter: Int = 1500
     private var tempPeripheral: CBPeripheral?
     private var currentCoor: GPSModel?
     private var targetCoor: GPSModel?
     
     private var tempDialog: CallModel?
     private var tempisAuto: Bool = false
+    private var tempisConnect: Bool = true
+    private var isTapQuit: Bool = false
+    private var isSendCall: Bool = false
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +88,8 @@ class CentralVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(cancelConnect), name: Notification.Name("removeApp"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -88,12 +97,8 @@ class CentralVC: UIViewController {
     }
     
     @objc private func quitconnected() {
-        if let peripheral = tempPeripheral {
-            centralManager?.cancelPeripheralConnection(peripheral)
-            centralManager?.scanForPeripherals(withServices: nil)
-            changeShow(connected: false)
-            getCoorData = false
-        }
+        sendConnection(isConnect: false)
+        isTapQuit = true
     }
     
     @objc private func findDevice() {
@@ -107,13 +112,15 @@ class CentralVC: UIViewController {
     }
     
     @objc private func getPeripheralRes() {
-        if tempisAuto {
-            if let info = tempDialog {
-                showWarningDialogVC(isCentral: true, isFindDevice: info.findDevice, isOverDistance: info.overDistance)
-            }
-        } else {
-            self.view.makeToast("資料已送出")
+        if let info = tempDialog {
+            radarView.isRotateRingAnimation = false
+            showWarningDialogVC(isCentral: true, isFindDevice: info.findDevice, isOverDistance: info.overDistance)
+            soundAndVibrate()
         }
+    }
+    
+    @objc private func cancelConnect() {
+        sendConnection(isConnect: false)
     }
     
     private func GIFInit() {
@@ -251,7 +258,7 @@ class CentralVC: UIViewController {
         
         if arrivedLimit {
             /// 超出範圍跳視窗並停止傳送資訊
-            sendPeripheral(info: CallModel(name: ,overDistance: true, findDevice: false), withoutRes: false)
+            sendPeripheral(info: CallModel(overDistance: true, findDevice: false), withoutRes: false)
         }
     }
     
@@ -270,17 +277,38 @@ class CentralVC: UIViewController {
         }
     }
     
-    private func sendPeripheral(info: CallModel, withoutRes: Bool) {
-        /// 關閉掃描
-        centralManager?.stopScan()
+    private func sendConnection(isConnect: Bool) {
+        isSendCall = false
+        tempisConnect = isConnect
         
-        tempDialog = info
-        tempisAuto = withoutRes
-        
-        guard let data = try? JSONEncoder().encode(info) else { return }
-        
+        guard let data = try? JSONEncoder().encode(ConnectModel(isConnct: isConnect)) else { return }
         if let peripheral = tempPeripheral, let characteristic = characteristic {
             peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        }
+    }
+    
+    private func sendPeripheral(info: CallModel, withoutRes: Bool) {
+        tempDialog = info
+        tempisAuto = withoutRes
+        isSendCall = true
+        
+        guard let data = try? JSONEncoder().encode(info) else { return }
+        if let peripheral = tempPeripheral, let characteristic = characteristic {
+            peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        }
+    }
+    
+    private func soundAndVibrate() {
+        guard let url = Bundle.main.url(forResource: "warning", withExtension: "mp3") else { return }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.rate = 0.75
+            audioPlayer?.play()
+            feedbackGenerator.notificationOccurred(.warning)
+        } catch {
+            print("無法播放鈴聲:\(error.localizedDescription)")
         }
     }
 }
@@ -349,12 +377,13 @@ extension CentralVC: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("因外部因素斷開連結了:\(String(describing: error?.localizedDescription))")
-        self.view.makeToast("因外部因素斷開連結了:\(String(describing: error?.localizedDescription))")
-        self.view_loading.isHidden = true
-        
-        changeShow(connected: false)
-        getCoorData = false
+        if !isTapQuit {
+            print("因外部因素斷開連結了:\(String(describing: error?.localizedDescription))")
+            self.view_loading.isHidden = true
+            
+            changeShow(connected: false)
+            getCoorData = false
+        }
     }
 }
 
@@ -409,9 +438,28 @@ extension CentralVC: CBPeripheralDelegate {
             return
         }
         
-        print("接收到來自發送端的訊息")
+        print("接收到來自發送端的Response")
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(getPeripheralRes), userInfo: nil, repeats: false)
+        if isSendCall {
+            if tempisAuto {
+                timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(getPeripheralRes), userInfo: nil, repeats: false)
+            } else {
+                self.view.makeToast("已送出訊息給Peripheral裝置")
+            }
+        } else {
+            changeShow(connected: tempisConnect)
+            getCoorData = tempisConnect
+            view_loading_show.isHidden = true
+            
+            self.view.makeToast(tempisConnect ? "已連接" : "斷開連接")
+            
+            if !tempisConnect {
+                label_title.text = "請選擇欲連接藍芽裝置"
+                centralManager?.cancelPeripheralConnection(peripheral)
+                centralManager?.scanForPeripherals(withServices: nil)
+                tempPeripheral = nil
+            }
+        }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -422,18 +470,33 @@ extension CentralVC: CBPeripheralDelegate {
                 
                 guard let start = currentCoor, let end = targetCoor else { return }
                 if !getCoorData {
-                    view_loading_show.isHidden = true
-                    changeShow(connected: true)
-                    getCoorData = true
+                    sendConnection(isConnect: true)
                 }
                 
                 setTargetPoint(start: start, end: end)
                 calculateDistance(start: start, end: end)
-            } else if let receivedData = try? JSONDecoder().decode(CallModel.self, from: value) {
-                
+            } else if let receivedData = try? JSONDecoder().decode(ConnectModel.self, from: value) {
+                if receivedData.isConnct == false {
+                    changeShow(connected: false)
+                    getCoorData = false
+                    view_loading_show.isHidden = true
+                    
+                    self.view.makeToast("斷開連接")
+                    
+                    centralManager?.cancelPeripheralConnection(peripheral)
+                    centralManager?.scanForPeripherals(withServices: nil)
+                    tempPeripheral = nil
+                }
             } else {
                 return
             }
         }
+    }
+}
+
+extension CentralVC: WarningDialogVCDelegate {
+    func leave() {
+        audioPlayer?.stop()
+        radarView.isRotateRingAnimation = true
     }
 }

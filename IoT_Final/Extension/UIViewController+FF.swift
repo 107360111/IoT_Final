@@ -78,7 +78,7 @@ extension UIViewController {
     
     func showWarningDialogVC(isCentral: Bool, isFindDevice: Bool, isOverDistance: Bool) {
         let VC = WarningDialogVC(isCentral: isCentral, isFindDevice: isFindDevice, isOverDistance: isOverDistance)
-        
+        VC.delegate = self as? WarningDialogVCDelegate
         VC.dialogShow(vc: self)
     }
     
@@ -90,7 +90,7 @@ extension UIViewController {
         presented.dialogDismiss(animator: animator, completion: completion)
     }
     
-    func dialogShow(vc: UIViewController, animator: Animator = .enlarge, completion: (() -> Void)? = nil) {
+    func dialogShow(vc: UIViewController, animator: Animator = .fade, completion: (() -> Void)? = nil) {
         self.modalPresentationStyle = .overFullScreen
         
         switch animator {
