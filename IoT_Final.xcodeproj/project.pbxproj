@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14326F412A29FC1C004E633C /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14326F402A29FC1C004E633C /* BasicVC.swift */; };
+		14422CFD2A3C7713006F65C1 /* WarningDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14422CFB2A3C7713006F65C1 /* WarningDialogVC.swift */; };
+		14422CFE2A3C7713006F65C1 /* WarningDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14422CFC2A3C7713006F65C1 /* WarningDialogVC.xib */; };
+		1471B4A82A384C9400CA8E24 /* CentralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4A62A384C9400CA8E24 /* CentralVC.swift */; };
+		1471B4A92A384C9400CA8E24 /* CentralVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4A72A384C9400CA8E24 /* CentralVC.xib */; };
+		1471B4AC2A384CB000CA8E24 /* PeriphralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4AA2A384CB000CA8E24 /* PeriphralVC.swift */; };
+		1471B4AD2A384CB000CA8E24 /* PeriphralVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4AB2A384CB000CA8E24 /* PeriphralVC.xib */; };
+		1471B4AF2A384D2800CA8E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4AE2A384D2800CA8E24 /* Main.storyboard */; };
+		1471B4B32A385C3F00CA8E24 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4B22A385C3F00CA8E24 /* PeripheralManager.swift */; };
+		1471B4BC2A399A7100CA8E24 /* bluetooth.json in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4BB2A399A7100CA8E24 /* bluetooth.json */; };
+		1471B4BF2A39A2E400CA8E24 /* central.json in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4BD2A39A2E400CA8E24 /* central.json */; };
+		1471B4C02A39A2E400CA8E24 /* perpheral.json in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4BE2A39A2E400CA8E24 /* perpheral.json */; };
+		1471B4C42A39C57600CA8E24 /* targetPoint.json in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4C32A39C57600CA8E24 /* targetPoint.json */; };
+		1471B4C62A39C74200CA8E24 /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4C52A39C74200CA8E24 /* location.json */; };
+		14D108962A2982460011EF1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D108952A2982460011EF1F /* AppDelegate.swift */; };
+		14D108982A2982460011EF1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D108972A2982460011EF1F /* SceneDelegate.swift */; };
+		14D1089A2A2982460011EF1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D108992A2982460011EF1F /* ViewController.swift */; };
+		14D1089F2A2982470011EF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D1089E2A2982470011EF1F /* Assets.xcassets */; };
+		14D108A22A2982470011EF1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D108A02A2982470011EF1F /* LaunchScreen.storyboard */; };
+		14D108B32A2986B80011EF1F /* BLEListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D108B12A2986B80011EF1F /* BLEListTableViewCell.swift */; };
+		14D108B42A2986B80011EF1F /* BLEListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D108B22A2986B80011EF1F /* BLEListTableViewCell.xib */; };
+		14E35FDD2A372BA90090B2EA /* UIViewController+FF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E35FDC2A372BA90090B2EA /* UIViewController+FF.swift */; };
+		14E35FDF2A372C2B0090B2EA /* SuspendTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E35FDE2A372C2B0090B2EA /* SuspendTool.swift */; };
+		14E35FE12A372CA40090B2EA /* SuspendWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E35FE02A372CA40090B2EA /* SuspendWindow.swift */; };
+		BB2FEE3D38ABB8387D2F69F9 /* Pods_IoT_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D27DC90D7EAFABA33635DA /* Pods_IoT_Final.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14326F402A29FC1C004E633C /* BasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
+		14422CFB2A3C7713006F65C1 /* WarningDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningDialogVC.swift; sourceTree = "<group>"; };
+		14422CFC2A3C7713006F65C1 /* WarningDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarningDialogVC.xib; sourceTree = "<group>"; };
+		1471B4A62A384C9400CA8E24 /* CentralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralVC.swift; sourceTree = "<group>"; };
+		1471B4A72A384C9400CA8E24 /* CentralVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralVC.xib; sourceTree = "<group>"; };
+		1471B4AA2A384CB000CA8E24 /* PeriphralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriphralVC.swift; sourceTree = "<group>"; };
+		1471B4AB2A384CB000CA8E24 /* PeriphralVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeriphralVC.xib; sourceTree = "<group>"; };
+		1471B4AE2A384D2800CA8E24 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1471B4B22A385C3F00CA8E24 /* PeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
+		1471B4BB2A399A7100CA8E24 /* bluetooth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bluetooth.json; sourceTree = "<group>"; };
+		1471B4BD2A39A2E400CA8E24 /* central.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = central.json; sourceTree = "<group>"; };
+		1471B4BE2A39A2E400CA8E24 /* perpheral.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perpheral.json; sourceTree = "<group>"; };
+		1471B4C32A39C57600CA8E24 /* targetPoint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = targetPoint.json; sourceTree = "<group>"; };
+		1471B4C52A39C74200CA8E24 /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		14D108922A2982460011EF1F /* IoT_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoT_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D108952A2982460011EF1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14D108972A2982460011EF1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14D108992A2982460011EF1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14D1089E2A2982470011EF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14D108A12A2982470011EF1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14D108A32A2982470011EF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D108B12A2986B80011EF1F /* BLEListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEListTableViewCell.swift; sourceTree = "<group>"; };
+		14D108B22A2986B80011EF1F /* BLEListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEListTableViewCell.xib; sourceTree = "<group>"; };
+		14E35FDC2A372BA90090B2EA /* UIViewController+FF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FF.swift"; sourceTree = "<group>"; };
+		14E35FDE2A372C2B0090B2EA /* SuspendTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendTool.swift; sourceTree = "<group>"; };
+		14E35FE02A372CA40090B2EA /* SuspendWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendWindow.swift; sourceTree = "<group>"; };
+		8485207C39B5658EBE8C1E75 /* Pods-IoT_Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoT_Final.debug.xcconfig"; path = "Target Support Files/Pods-IoT_Final/Pods-IoT_Final.debug.xcconfig"; sourceTree = "<group>"; };
+		B7D27DC90D7EAFABA33635DA /* Pods_IoT_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IoT_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB4D6361A068A24415D570B /* Pods-IoT_Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoT_Final.release.xcconfig"; path = "Target Support Files/Pods-IoT_Final/Pods-IoT_Final.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D1088F2A2982460011EF1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2FEE3D38ABB8387D2F69F9 /* Pods_IoT_Final.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14326F3B2A29FA02004E633C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1471B4A52A384C6A00CA8E24 /* CentralVC */,
+				1471B4A42A384C5300CA8E24 /* PeriphralVC */,
+				14D108992A2982460011EF1F /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		14326F3F2A29FC0A004E633C /* BasicVC */ = {
+			isa = PBXGroup;
+			children = (
+				14326F402A29FC1C004E633C /* BasicVC.swift */,
+			);
+			path = BasicVC;
+			sourceTree = "<group>";
+		};
+		14422CFA2A3C76C0006F65C1 /* WarningDialogVC */ = {
+			isa = PBXGroup;
+			children = (
+				14422CFB2A3C7713006F65C1 /* WarningDialogVC.swift */,
+				14422CFC2A3C7713006F65C1 /* WarningDialogVC.xib */,
+			);
+			path = WarningDialogVC;
+			sourceTree = "<group>";
+		};
+		1471B4A42A384C5300CA8E24 /* PeriphralVC */ = {
+			isa = PBXGroup;
+			children = (
+				1471B4AA2A384CB000CA8E24 /* PeriphralVC.swift */,
+				1471B4AB2A384CB000CA8E24 /* PeriphralVC.xib */,
+			);
+			path = PeriphralVC;
+			sourceTree = "<group>";
+		};
+		1471B4A52A384C6A00CA8E24 /* CentralVC */ = {
+			isa = PBXGroup;
+			children = (
+				1471B4A62A384C9400CA8E24 /* CentralVC.swift */,
+				1471B4A72A384C9400CA8E24 /* CentralVC.xib */,
+			);
+			path = CentralVC;
+			sourceTree = "<group>";
+		};
+		1471B4B12A385C1F00CA8E24 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1471B4B22A385C3F00CA8E24 /* PeripheralManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1471B4B42A3982F300CA8E24 /* gifJosnAssets */ = {
+			isa = PBXGroup;
+			children = (
+				1471B4C52A39C74200CA8E24 /* location.json */,
+				1471B4BB2A399A7100CA8E24 /* bluetooth.json */,
+				1471B4BD2A39A2E400CA8E24 /* central.json */,
+				1471B4BE2A39A2E400CA8E24 /* perpheral.json */,
+				1471B4C32A39C57600CA8E24 /* targetPoint.json */,
+			);
+			path = gifJosnAssets;
+			sourceTree = "<group>";
+		};
+		14D108892A2982460011EF1F = {
+			isa = PBXGroup;
+			children = (
+				14D108942A2982460011EF1F /* IoT_Final */,
+				14D108932A2982460011EF1F /* Products */,
+				C7F588CBB0156FF2EF5C6C88 /* Pods */,
+				7B6E666AA2467B6D3BC27393 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14D108932A2982460011EF1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D108922A2982460011EF1F /* IoT_Final.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D108942A2982460011EF1F /* IoT_Final */ = {
+			isa = PBXGroup;
+			children = (
+				14D108952A2982460011EF1F /* AppDelegate.swift */,
+				14326F3F2A29FC0A004E633C /* BasicVC */,
+				14D108B02A2984E60011EF1F /* BLEListTableViewCell */,
+				14E35FDB2A372B8C0090B2EA /* Extension */,
+				1471B4B12A385C1F00CA8E24 /* Manager */,
+				14D108972A2982460011EF1F /* SceneDelegate.swift */,
+				14E35FD92A372ACB0090B2EA /* SuspendView */,
+				14326F3B2A29FA02004E633C /* ViewController */,
+				14422CFA2A3C76C0006F65C1 /* WarningDialogVC */,
+				1471B4AE2A384D2800CA8E24 /* Main.storyboard */,
+				14D1089E2A2982470011EF1F /* Assets.xcassets */,
+				1471B4B42A3982F300CA8E24 /* gifJosnAssets */,
+				14D108A02A2982470011EF1F /* LaunchScreen.storyboard */,
+				14D108A32A2982470011EF1F /* Info.plist */,
+			);
+			path = IoT_Final;
+			sourceTree = "<group>";
+		};
+		14D108B02A2984E60011EF1F /* BLEListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				14D108B12A2986B80011EF1F /* BLEListTableViewCell.swift */,
+				14D108B22A2986B80011EF1F /* BLEListTableViewCell.xib */,
+			);
+			path = BLEListTableViewCell;
+			sourceTree = "<group>";
+		};
+		14E35FD92A372ACB0090B2EA /* SuspendView */ = {
+			isa = PBXGroup;
+			children = (
+				14E35FDE2A372C2B0090B2EA /* SuspendTool.swift */,
+				14E35FE02A372CA40090B2EA /* SuspendWindow.swift */,
+			);
+			path = SuspendView;
+			sourceTree = "<group>";
+		};
+		14E35FDB2A372B8C0090B2EA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14E35FDC2A372BA90090B2EA /* UIViewController+FF.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7B6E666AA2467B6D3BC27393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7D27DC90D7EAFABA33635DA /* Pods_IoT_Final.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7F588CBB0156FF2EF5C6C88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8485207C39B5658EBE8C1E75 /* Pods-IoT_Final.debug.xcconfig */,
+				DDB4D6361A068A24415D570B /* Pods-IoT_Final.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D108912A2982460011EF1F /* IoT_Final */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D108A62A2982470011EF1F /* Build configuration list for PBXNativeTarget "IoT_Final" */;
+			buildPhases = (
+				9DA66B08921DB235B5383995 /* [CP] Check Pods Manifest.lock */,
+				14D1088E2A2982460011EF1F /* Sources */,
+				14D1088F2A2982460011EF1F /* Frameworks */,
+				14D108902A2982460011EF1F /* Resources */,
+				BBA3F01041EC87D7623DE207 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IoT_Final;
+			productName = IoT_Final;
+			productReference = 14D108922A2982460011EF1F /* IoT_Final.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D1088A2A2982460011EF1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					14D108912A2982460011EF1F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 14D1088D2A2982460011EF1F /* Build configuration list for PBXProject "IoT_Final" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14D108892A2982460011EF1F;
+			productRefGroup = 14D108932A2982460011EF1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D108912A2982460011EF1F /* IoT_Final */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D108902A2982460011EF1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1471B4A92A384C9400CA8E24 /* CentralVC.xib in Resources */,
+				1471B4C62A39C74200CA8E24 /* location.json in Resources */,
+				14D108A22A2982470011EF1F /* LaunchScreen.storyboard in Resources */,
+				1471B4AD2A384CB000CA8E24 /* PeriphralVC.xib in Resources */,
+				1471B4BC2A399A7100CA8E24 /* bluetooth.json in Resources */,
+				1471B4AF2A384D2800CA8E24 /* Main.storyboard in Resources */,
+				1471B4BF2A39A2E400CA8E24 /* central.json in Resources */,
+				1471B4C02A39A2E400CA8E24 /* perpheral.json in Resources */,
+				14D1089F2A2982470011EF1F /* Assets.xcassets in Resources */,
+				14D108B42A2986B80011EF1F /* BLEListTableViewCell.xib in Resources */,
+				1471B4C42A39C57600CA8E24 /* targetPoint.json in Resources */,
+				14422CFE2A3C7713006F65C1 /* WarningDialogVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DA66B08921DB235B5383995 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IoT_Final-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA3F01041EC87D7623DE207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IoT_Final/Pods-IoT_Final-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IoT_Final/Pods-IoT_Final-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IoT_Final/Pods-IoT_Final-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D1088E2A2982460011EF1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1471B4AC2A384CB000CA8E24 /* PeriphralVC.swift in Sources */,
+				14E35FE12A372CA40090B2EA /* SuspendWindow.swift in Sources */,
+				14D1089A2A2982460011EF1F /* ViewController.swift in Sources */,
+				14D108962A2982460011EF1F /* AppDelegate.swift in Sources */,
+				1471B4B32A385C3F00CA8E24 /* PeripheralManager.swift in Sources */,
+				14E35FDD2A372BA90090B2EA /* UIViewController+FF.swift in Sources */,
+				14326F412A29FC1C004E633C /* BasicVC.swift in Sources */,
+				14E35FDF2A372C2B0090B2EA /* SuspendTool.swift in Sources */,
+				14D108982A2982460011EF1F /* SceneDelegate.swift in Sources */,
+				1471B4A82A384C9400CA8E24 /* CentralVC.swift in Sources */,
+				14D108B32A2986B80011EF1F /* BLEListTableViewCell.swift in Sources */,
+				14422CFD2A3C7713006F65C1 /* WarningDialogVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14D108A02A2982470011EF1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D108A12A2982470011EF1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14D108A42A2982470011EF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14D108A52A2982470011EF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14D108A72A2982470011EF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8485207C39B5658EBE8C1E75 /* Pods-IoT_Final.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IoT_Final/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "系統會要求使用者開啟藍芽";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "系統會要求使用者開啟藍芽";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "系統會要求使用者開定位";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "系統會要求使用者開定位";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mmslab.IoT-Final";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14D108A82A2982470011EF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB4D6361A068A24415D570B /* Pods-IoT_Final.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IoT_Final/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "系統會要求使用者開啟藍芽";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "系統會要求使用者開啟藍芽";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "系統會要求使用者開定位";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "系統會要求使用者開定位";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mmslab.IoT-Final";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D1088D2A2982460011EF1F /* Build configuration list for PBXProject "IoT_Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D108A42A2982470011EF1F /* Debug */,
+				14D108A52A2982470011EF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D108A62A2982470011EF1F /* Build configuration list for PBXNativeTarget "IoT_Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D108A72A2982470011EF1F /* Debug */,
+				14D108A82A2982470011EF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D1088A2A2982460011EF1F /* Project object */;
+}

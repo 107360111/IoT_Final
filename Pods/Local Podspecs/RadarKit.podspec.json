@@ -1,0 +1,36 @@
+{
+  "name": "RadarKit",
+  "version": "1.1.0",
+  "summary": "RadarKit allows you to add radar effect to find nearby user",
+  "description": "RadarKit allows you to add radar effect to find nearby user",
+  "homepage": "https://github.com/parthgohel2810/RadarKit.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Parth Gohel": "parth.gohel@mindinventory.com"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "https://github.com/parthgohel2810/RadarKit.git",
+    "tag": "1.1.0"
+  },
+  "resources": "RadarKit/**/*.{lproj,xcdatamodeld,xcassets,strings,xib,json,pdf,png,ttf}",
+  "resource_bundles": {
+    "RadarKit": [
+      "RadarKit/**/*.{lproj,xcdatamodeld,xcassets,strings,xib,json,pdf,png}"
+    ]
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "RadarKit/**/*.swift"
+    }
+  ],
+  "swift_version": "5.0"
+}
