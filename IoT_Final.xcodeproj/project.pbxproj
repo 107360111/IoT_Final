@@ -13,9 +13,9 @@
 		14422D002A3D6746006F65C1 /* peripheral_CallBell.json in Resources */ = {isa = PBXBuildFile; fileRef = 14422CFF2A3D6746006F65C1 /* peripheral_CallBell.json */; };
 		14422D022A3D6A0A006F65C1 /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = 14422D012A3D6A0A006F65C1 /* warning.json */; };
 		14422D052A3D87FD006F65C1 /* disconnect.json in Resources */ = {isa = PBXBuildFile; fileRef = 14422D032A3D87FD006F65C1 /* disconnect.json */; };
-		14422D082A3D8B4B006F65C1 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = 14422D072A3D8B4B006F65C1 /* connect.json */; };
 		14422D0D2A3DAA54006F65C1 /* warning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14422D0C2A3DAA54006F65C1 /* warning.mp3 */; };
-		14422D112A3DAA83006F65C1 /* ding_dong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14422D102A3DAA83006F65C1 /* ding_dong.mp3 */; };
+		14422D152A401722006F65C1 /* ding_dong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14422D142A401722006F65C1 /* ding_dong.mp3 */; };
+		14422D172A40173E006F65C1 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = 14422D162A40173E006F65C1 /* connect.json */; };
 		1471B4A82A384C9400CA8E24 /* CentralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4A62A384C9400CA8E24 /* CentralVC.swift */; };
 		1471B4A92A384C9400CA8E24 /* CentralVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4A72A384C9400CA8E24 /* CentralVC.xib */; };
 		1471B4AC2A384CB000CA8E24 /* PeriphralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4AA2A384CB000CA8E24 /* PeriphralVC.swift */; };
@@ -47,9 +47,9 @@
 		14422CFF2A3D6746006F65C1 /* peripheral_CallBell.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = peripheral_CallBell.json; sourceTree = "<group>"; };
 		14422D012A3D6A0A006F65C1 /* warning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
 		14422D032A3D87FD006F65C1 /* disconnect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = disconnect.json; sourceTree = "<group>"; };
-		14422D072A3D8B4B006F65C1 /* connect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = connect.json; path = ../../../connect.json; sourceTree = "<group>"; };
 		14422D0C2A3DAA54006F65C1 /* warning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = warning.mp3; sourceTree = "<group>"; };
-		14422D102A3DAA83006F65C1 /* ding_dong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ding_dong.mp3; path = ../../../ding_dong.mp3; sourceTree = "<group>"; };
+		14422D142A401722006F65C1 /* ding_dong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding_dong.mp3; sourceTree = "<group>"; };
+		14422D162A40173E006F65C1 /* connect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = connect.json; sourceTree = "<group>"; };
 		1471B4A62A384C9400CA8E24 /* CentralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralVC.swift; sourceTree = "<group>"; };
 		1471B4A72A384C9400CA8E24 /* CentralVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralVC.xib; sourceTree = "<group>"; };
 		1471B4AA2A384CB000CA8E24 /* PeriphralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriphralVC.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		14422D092A3DA9FB006F65C1 /* soundAssets */ = {
 			isa = PBXGroup;
 			children = (
-				14422D102A3DAA83006F65C1 /* ding_dong.mp3 */,
+				14422D142A401722006F65C1 /* ding_dong.mp3 */,
 				14422D0C2A3DAA54006F65C1 /* warning.mp3 */,
 			);
 			path = soundAssets;
@@ -155,11 +155,11 @@
 		1471B4B42A3982F300CA8E24 /* gifJosnAssets */ = {
 			isa = PBXGroup;
 			children = (
-				14422D072A3D8B4B006F65C1 /* connect.json */,
-				14422D032A3D87FD006F65C1 /* disconnect.json */,
-				1471B4C52A39C74200CA8E24 /* location.json */,
 				1471B4BB2A399A7100CA8E24 /* bluetooth.json */,
 				1471B4BD2A39A2E400CA8E24 /* central.json */,
+				14422D162A40173E006F65C1 /* connect.json */,
+				14422D032A3D87FD006F65C1 /* disconnect.json */,
+				1471B4C52A39C74200CA8E24 /* location.json */,
 				1471B4BE2A39A2E400CA8E24 /* perpheral.json */,
 				14422CFF2A3D6746006F65C1 /* peripheral_CallBell.json */,
 				1471B4C32A39C57600CA8E24 /* targetPoint.json */,
@@ -315,7 +315,7 @@
 				14422D002A3D6746006F65C1 /* peripheral_CallBell.json in Resources */,
 				1471B4C62A39C74200CA8E24 /* location.json in Resources */,
 				14D108A22A2982470011EF1F /* LaunchScreen.storyboard in Resources */,
-				14422D112A3DAA83006F65C1 /* ding_dong.mp3 in Resources */,
+				14422D152A401722006F65C1 /* ding_dong.mp3 in Resources */,
 				1471B4AD2A384CB000CA8E24 /* PeriphralVC.xib in Resources */,
 				1471B4BC2A399A7100CA8E24 /* bluetooth.json in Resources */,
 				14422D022A3D6A0A006F65C1 /* warning.json in Resources */,
@@ -323,11 +323,11 @@
 				1471B4BF2A39A2E400CA8E24 /* central.json in Resources */,
 				1471B4C02A39A2E400CA8E24 /* perpheral.json in Resources */,
 				14D1089F2A2982470011EF1F /* Assets.xcassets in Resources */,
+				14422D172A40173E006F65C1 /* connect.json in Resources */,
 				14D108B42A2986B80011EF1F /* BLEListTableViewCell.xib in Resources */,
 				1471B4C42A39C57600CA8E24 /* targetPoint.json in Resources */,
 				14422D052A3D87FD006F65C1 /* disconnect.json in Resources */,
 				14422D0D2A3DAA54006F65C1 /* warning.mp3 in Resources */,
-				14422D082A3D8B4B006F65C1 /* connect.json in Resources */,
 				14422CFE2A3C7713006F65C1 /* WarningDialogVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

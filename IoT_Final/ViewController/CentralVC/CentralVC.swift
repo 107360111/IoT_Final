@@ -377,13 +377,13 @@ extension CentralVC: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        if !isTapQuit {
-            print("因外部因素斷開連結了:\(String(describing: error?.localizedDescription))")
-            self.view_loading.isHidden = true
-            
-            changeShow(connected: false)
-            getCoorData = false
-        }
+//        if !isTapQuit {
+//            print("因外部因素斷開連結了:\(String(describing: error?.localizedDescription))")
+//            self.view_loading.isHidden = true
+//            
+//            changeShow(connected: false)
+//            getCoorData = false
+//        }
     }
 }
 
@@ -471,6 +471,7 @@ extension CentralVC: CBPeripheralDelegate {
                 guard let start = currentCoor, let end = targetCoor else { return }
                 if !getCoorData {
                     sendConnection(isConnect: true)
+                    getCoorData = true
                 }
                 
                 setTargetPoint(start: start, end: end)
